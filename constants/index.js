@@ -16,7 +16,7 @@ export const gallery = [
         subtext: "Live the Beauty ",
         category: "Stylish, Modern, Ring"
     }, {
-        imgUrl: "/assets/asset5.jpg",
+        imgUrl: "/assets/asset7.jpg",
         title: "Beaded Necklace",
         subtext: "Live the Beauty ",
         category: "Stylish, Modern, Ring"
