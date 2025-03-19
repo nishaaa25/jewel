@@ -1,18 +1,20 @@
 @import "tailwindcss";
 
 :root {
-  --background: #FAFBF8;
+  --background: #fafbf8;
   --foreground: #171717;
 }
 * {
   box-sizing: border-box;
-  padding: 0;
-  margin: 0;
 }
+
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --color-dark-400: #424340 ;
+  --color-dark-400: #424340;
+  --color-red-600: #d53f41;
+  --color-grey-400: #dbd8d6;
+  --color-cream-200: #bebbbf;
   --font-sans: var(--font-garamond);
   /* --font-mono: var(--font-geist-mono); */
 }
@@ -27,14 +29,57 @@
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family:"Cormorant Garamond", serif;
+  font-family: "Cormorant Garamond", serif;
+  margin: 0;
+  padding: 0;
+  cursor: none;
+  overflow-x: hidden
 }
 
-@layer base{
-  .flex-center{
+@layer base {
+  .flex-center {
     @apply flex justify-center items-center;
   }
-  .flex-between{
+  .flex-between {
     @apply flex justify-between items-center;
   }
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none;
+  }
+}
+
+/* .gallery-counter{
+  mix-blend-mode: difference;
+} */
+.gallery-item {
+  will-change: transform;
+}
+
+.gallery-item-info {
+  transform: translateX(-20%);
+}
+.gallery-item-subtext {
+  -webkit-text-fill-color: transparent; /* Will override color (regardless of order) */
+  -webkit-text-stroke-width: 1px;
+  --webkit-text-stroke: 2px #dbd8d6;
+}
+
+.gallery-item-wrapper {
+  aspect-ratio: 16/9;
+  height: 100%;
+  display: grid;
+  grid-template-columns: 20vw 1fr 200px;
+  width: 100vw;
+}
+
+.gallery-item-image {
+  background-size: cover;
+  background-origin: center;
+  background-position: center;
+  width: 100%;
+  height: 100%;
+  will-change: transform;
+  transform: scale(1);
 }

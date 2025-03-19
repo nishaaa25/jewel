@@ -1,14 +1,20 @@
-import Gallery from "@/components/Gallery";
-import Header from "@/components/Header";
 import Navbar from "@/components/Navbar";
-import Image from "next/image";
+import Header from "@/components/Header";
+import Gallery from "@/components/Gallery";
+import About from "@/components/About";
+import Featured from "@/components/Featured";
+import Footer from "@/components/Footer";
 
 export default function Home() {
   return (
-    <div className="w-full mx-auto relative text-dark-400">
-      <Navbar/>
-      <Header/>
-      {/* <Gallery/> */}
+    <div className="w-full relative flex flex-col text-dark-400">
+      <Navbar />
+      <Header />
+      <Featured/>
+      <About/>
+      <Gallery/>
+      <Footer/>
     </div>
   );
 }
+
